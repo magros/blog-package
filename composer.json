@@ -1,0 +1,26 @@
+{
+    "name": "magros/blog-package",
+    "type": "library",
+    "license": "MIT",
+    "require": {},
+    "require-dev": {
+        "orchestra/testbench-browser-kit": "^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Magros\\BlogPackage\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Magros\\BlogPackage\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Magros\\BlogPackage\\BlogPackageServiceProvider"
+            ]
+        }
+    }
+}
