@@ -44,4 +44,10 @@ class PostController extends Controller
 
         return view('BlogPackage::index', compact('posts'));
     }
+
+    public function destroy($id)
+    {
+        $post = Post::find($id);
+        $post->delete();
+    }
 }

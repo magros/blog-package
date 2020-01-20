@@ -54,4 +54,16 @@ class BlogTest extends TestCase
             ->see($anotherPost->title)
             ->see($post->title);
     }
+
+    /**
+     * @test
+     */
+    public function it_test_that_i_can_delete_a_post()
+    {
+        $post = factory(Post::class)->create();
+        $this->visit("/blog-package/posts")->press('Eliminar');
+        $this->dontSeeInDatabase('blog_package_posts', [
+            'id' => $post->id,
+        ]);
+    }
 }

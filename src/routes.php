@@ -10,4 +10,5 @@ Route::group(['prefix' => 'posts'], function () {
 
     Route::get('/{id}/edit', 'PostController@edit')->name('blog.package.edit');
     Route::post('/{id}/edit', 'PostController@update');
+    Route::delete('/{id}/delete', 'PostController@destroy')->name('blog.package.delete');
 });
