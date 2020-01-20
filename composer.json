@@ -3,6 +3,7 @@
     "type": "library",
     "license": "MIT",
     "require": {},
+    "version": "alpha",
     "require-dev": {
         "orchestra/testbench-browser-kit": "^4.0"
     },
